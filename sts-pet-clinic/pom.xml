@@ -6,6 +6,18 @@
 	<groupId>starter.springframework</groupId>
 	<artifactId>sts-pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<profiles>
+		<profile>
+			<modules>
+				<module>pet-clinic-data</module>
+				<module>pet-clinic-web</module>
+			</modules>
+		</profile>
+	</profiles>
+	<modules>
+		<module>pet-clinic-data</module>
+		<module>pet-clinic-web</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<name>sts-pet-clinic</name>
@@ -15,7 +27,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -26,16 +38,7 @@
 
 	<dependencies>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -47,13 +50,4 @@
 		</plugins>
 	</build>
 
-
-	<modules>
-		<module>
-			pet-clinic-data
-		</module>
-		<module>
-			pet-clinic-web
-		</module>
-	</modules>
 </project>
